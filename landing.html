@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --very-light-pink: #c7c7c7;
+            --text-input-field: #f7f7f7;
+            --hospital-green: #ACD9B2;
+            --white: #FFFFFF;
+            --black: #000000;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+        }
+
+        /*Elimina el margin del body, agrega tipografía*/
+        body {
+            margin: 0;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+
+        .cardsContainer {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 240px);
+            gap: 28px;
+            place-content: center;
+        }
+
+        .productCard {
+            width: 240px;
+        }
+
+        /*object-fit:cover la imagen conserva su tamaño independiente del w y h, se ajusta*/
+        .productCard .productImg {
+            width: 240px;
+            height: 240px;
+            border-radius: 20px;
+            object-fit: cover;
+        }
+
+        .productInfo {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 4px;
+        }
+
+        .productInfo div p:nth-child(1){
+            font-weight: bold;
+            font-size: var(--md);
+            margin-top: 0;
+            margin-bottom: 4px;
+        }
+
+        .productInfo div p:nth-child(2){
+            color: var(--very-light-pink);
+            font-size: var(--sm);
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        .productInfo figure {
+            margin: 0;
+        }
+
+        .productInfo .cart {
+            width: 32px;
+            height: 32px;
+        }
+
+        @media (max-width:640px) {
+            .cardsContainer {
+                grid-template-columns: repeat(auto-fill, 140px);
+                gap: 28px;
+            }
+            .productCard{
+                width: 140px;
+            }
+
+            .productCard .productImg{
+                width: 140px;
+                height: 140px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="mainContainer">
+        <div class="cardsContainer">
+            <div class="productCard">
+                <img src="https://images.pexels.com/photos/2626665/pexels-photo-2626665.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt="" class="productImg">
+                <div class="productInfo">
+                    <div>
+                        <p>$120,00</p>
+                        <p>KTM Duke</p>
+                    </div>
+                    <figure>
+                        <img src="./assets/Platzi_YardSale_Icons/bt_add_to_cart.svg" alt="" class="cart">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="productCard">
+                <img src="https://images.pexels.com/photos/2626665/pexels-photo-2626665.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt="" class="productImg">
+                <div class="productInfo">
+                    <div>
+                        <p>$120,00</p>
+                        <p>KTM Duke</p>
+                    </div>
+                    <figure>
+                        <img src="./assets/Platzi_YardSale_Icons/bt_add_to_cart.svg" alt="" class="cart">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="productCard">
+                <img src="https://images.pexels.com/photos/2626665/pexels-photo-2626665.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt="" class="productImg">
+                <div class="productInfo">
+                    <div>
+                        <p>$120,00</p>
+                        <p>KTM Duke</p>
+                    </div>
+                    <figure>
+                        <img src="./assets/Platzi_YardSale_Icons/bt_add_to_cart.svg" alt="" class="cart">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="productCard">
+                <img src="https://images.pexels.com/photos/2626665/pexels-photo-2626665.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt="" class="productImg">
+                <div class="productInfo">
+                    <div>
+                        <p>$120,00</p>
+                        <p>KTM Duke</p>
+                    </div>
+                    <figure>
+                        <img src="./assets/Platzi_YardSale_Icons/bt_add_to_cart.svg" alt="" class="cart">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="productCard">
+                <img src="https://images.pexels.com/photos/2626665/pexels-photo-2626665.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt="" class="productImg">
+                <div class="productInfo">
+                    <div>
+                        <p>$120,00</p>
+                        <p>KTM Duke</p>
+                    </div>
+                    <figure>
+                        <img src="./assets/Platzi_YardSale_Icons/bt_add_to_cart.svg" alt="" class="cart">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="productCard">
+                <img src="https://images.pexels.com/photos/2626665/pexels-photo-2626665.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt="" class="productImg">
+                <div class="productInfo">
+                    <div>
+                        <p>$120,00</p>
+                        <p>KTM Duke</p>
+                    </div>
+                    <figure>
+                        <img src="./assets/Platzi_YardSale_Icons/bt_add_to_cart.svg" alt="" class="cart">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="productCard">
+                <img src="https://images.pexels.com/photos/2626665/pexels-photo-2626665.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt="" class="productImg">
+                <div class="productInfo">
+                    <div>
+                        <p>$120,00</p>
+                        <p>KTM Duke</p>
+                    </div>
+                    <figure>
+                        <img src="./assets/Platzi_YardSale_Icons/bt_add_to_cart.svg" alt="" class="cart">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="productCard">
+                <img src="https://images.pexels.com/photos/2626665/pexels-photo-2626665.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt="" class="productImg">
+                <div class="productInfo">
+                    <div>
+                        <p>$120,00</p>
+                        <p>KTM Duke</p>
+                    </div>
+                    <figure>
+                        <img src="./assets/Platzi_YardSale_Icons/bt_add_to_cart.svg" alt="" class="cart">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="productCard">
+                <img src="https://images.pexels.com/photos/2626665/pexels-photo-2626665.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt="" class="productImg">
+                <div class="productInfo">
+                    <div>
+                        <p>$120,00</p>
+                        <p>KTM Duke</p>
+                    </div>
+                    <figure>
+                        <img src="./assets/Platzi_YardSale_Icons/bt_add_to_cart.svg" alt="" class="cart">
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
