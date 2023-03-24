@@ -1,28 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YardSale</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
-    <style>
-        :root{
-            --very-light-pink: #c7c7c7;
-            --text-input-field: #f7f7f7;
-            --hospital-green: #ACD9B2;
-            --white: #FFFFFF;
-            --black: #000000;
-        }
 
-        body{
-            font-family: 'Quicksand', sans-serif;
-        }
-    </style>
+    <link rel="stylesheet" href="./styles.css">
 </head>
+
 <body>
-    
+    <nav>
+        <img src="./assets/Platzi_YardSale_Icons/icon_menu.svg" alt="" class="burgerMenu">
+        <div class="navbarLeft">
+            <img src="./assets/Platzi_YardSale_Logos/logo_yard_sale.svg" alt="" class="logo">
+            <ul class="categories">
+                <li><a href="">All</a></li>
+                <li><a href="">Clothes</a></li>
+                <li><a href="">Electronics</a></li>
+                <li><a href="">Furnitures</a></li>
+                <li><a href="">Toys</a></li>
+                <li><a href="">Others</a></li>
+            </ul>
+        </div>
+        <div class="navbarRight">
+            <ul>
+                <li class="userEmail">email@gmail.com</li>
+                <li class="navShoppingCart">
+                    <img class="cartIcon" src="./assets/Platzi_YardSale_Icons/icon_shopping_cart.svg" alt="">
+                    <div>2</div>
+                </li>
+            </ul>
+        </div>
+        <div class="desktopMenu inactive">
+            <ul>
+                <li><a href="" class="">My orders</a></li>
+                <li><a href="" class="">My account</a></li>
+                <li><a href="" class="">Sign out</a></li>
+            </ul>
+        </div>
+    </nav>
 </body>
+<script src="./main.js"></script>
 </html>
