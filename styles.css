@@ -24,6 +24,7 @@ nav {
 
 .burgerMenu {
     display: none;
+    cursor: pointer;
 }
 
 .logo {
@@ -74,6 +75,7 @@ nav div.navbarLeft ul.categories {
 
 .navShoppingCart {
     position: relative;
+    cursor: pointer;
 }
 
 .navShoppingCart div {
@@ -187,6 +189,96 @@ nav div.navbarLeft ul.categories {
     margin-bottom: 4px;
 }
 
+/* Shopping cart */
+.cartDetail {
+    width: 360px;
+    padding: 0 20px;
+    position: absolute;
+    right: 0;
+    box-sizing: border-box;
+}
+
+.titleContainer{
+    display: flex;
+}
+
+.titleContainer img{
+    transform: rotate(180deg);
+    margin-right: 14px;
+}
+.title{
+    font-size: var(--lg);
+    font-weight: bold;
+}
+
+.order{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    background-color: var(--text-input-field);
+    gap: 16px;
+    align-items: center;
+    padding: 0 24px;
+    margin-bottom: 32px;
+    border-radius: 8px;
+}
+
+.order div{
+    display: flex;
+    flex-direction: column;
+}
+
+.order div span:nth-child(1){
+    font-weight: bold;
+}
+
+.order div span:nth-child(2){
+    font-size: var(--sm);
+    color: var(--very-light-pink);
+}
+
+.order p{
+    text-align: end;
+    font-weight: bold;
+}
+
+.cart{
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    gap: 16px;
+    margin-bottom: 12px;
+    align-items: center;
+}
+
+.cart figure{
+    margin: 0;
+}
+
+.cart figure img{
+    width: 70px;
+    height: 70px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+
+.primaryButton {
+    background-color: var(--hospital-green);
+    border-radius: 8px;
+    border: none;
+    color: var(--white);
+    width: 100%;
+    cursor: pointer;
+    font-size: var(--md);
+    font-weight: bold;
+    height: 50px;
+}
+
+.cartButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 
 .inactive {
@@ -205,11 +297,17 @@ nav div.navbarLeft ul.categories {
         display: none;
     }
 
-    
+    .cartDetail {
+        width: 100%;
+    }
 }
 
 @media (min-width:641px) {
     .mobileMenu{
         display: none;
     }
+}
+
+@media (max-width: 640px) {
+
 }
