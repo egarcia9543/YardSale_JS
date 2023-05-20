@@ -12,17 +12,29 @@ burgerMenu.addEventListener("click", toggleBurger);
 cartMenu.addEventListener("click", toggleCart);
 
 function toggleMenu(){
+    const isCartClosed = cartDetail.classList.contains("inactive");
+    if (!isCartClosed){
+        cartDetail.classList.add("inactive");
+    }
     desktopMenu.classList.toggle("inactive");
 }
 
 function toggleBurger(){
+    const isCartClosed = cartDetail.classList.contains("inactive");
+    if (!isCartClosed){
+        cartDetail.classList.add("inactive");
+    }
     mobileMenu.classList.toggle("inactive");
 }
 
 function toggleCart(){
-    cartDetail.classList.toggle("inactive");
-
-    if (mobileMenu.classList.contains("inactive")) {
-        
+    const isMobileClosed = mobileMenu.classList.contains("inactive");
+    const isDesktopMenuClosed = desktopMenu.classList.contains("inactive");
+    
+    if (!isMobileClosed) {
+        mobileMenu.classList.add("inactive");
+    } else if (!isDesktopMenuClosed){
+        desktopMenu.classList.add("inactive");
     }
+    cartDetail.classList.toggle("inactive");
 }
