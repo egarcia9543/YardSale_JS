@@ -140,7 +140,7 @@ nav div.navbarLeft ul.categories {
 /* Menu mobile */
 .mobileMenu {
     padding: 0 8px;
-    height: 100vh;
+    height: 90vh;
     width: 100%;
     left: 0;
     background-color: var(--white);
@@ -148,6 +148,7 @@ nav div.navbarLeft ul.categories {
     flex-direction: column;
     position: absolute;
     top: 60px;
+    box-sizing: border-box;
 }
 
 .mobileMenu ul.categories {

@@ -3,9 +3,11 @@ const desktopMenu = document.querySelector(".desktopMenu");
 
 const burgerMenu = document.querySelector(".burgerMenu");
 const mobileMenu = document.querySelector(".mobileMenu")
+const productDetailCloseAside = document.querySelector(".closeBtn");
 
 const cartMenu = document.querySelector(".navShoppingCart");
 const cartDetail = document.querySelector(".cartDetail");
+const productDetail = document.querySelector("#productDetail");
 
 const cardsContainer = document.querySelector(".cardsContainer");
 
@@ -13,12 +15,16 @@ menuEmail.addEventListener("click", toggleMenu);
 burgerMenu.addEventListener("click", toggleBurger);
 cartMenu.addEventListener("click", toggleCart);
 
+productDetailCloseAside.addEventListener("click", productDetailClose);
+
+
 function toggleMenu(){
     const isCartClosed = cartDetail.classList.contains("inactive");
     if (!isCartClosed){
         cartDetail.classList.add("inactive");
     }
     desktopMenu.classList.toggle("inactive");
+    productDetailClose();
 }
 
 function toggleBurger(){
@@ -26,13 +32,17 @@ function toggleBurger(){
     if (!isCartClosed){
         cartDetail.classList.add("inactive");
     }
+    productDetailClose();
     mobileMenu.classList.toggle("inactive");
 }
 
 function toggleCart(){
     const isMobileClosed = mobileMenu.classList.contains("inactive");
     const isDesktopMenuClosed = desktopMenu.classList.contains("inactive");
-    
+    const isProductDetailClosed = productDetail.classList.contains("inactive");
+    if (!isProductDetailClosed){
+        productDetail.classList.add("inactive");
+    }
     if (!isMobileClosed) {
         mobileMenu.classList.add("inactive");
     } else if (!isDesktopMenuClosed){
@@ -41,6 +51,15 @@ function toggleCart(){
     cartDetail.classList.toggle("inactive");
 }
 
+function openProductDetail(){
+    cartDetail.classList.add("inactive");
+    productDetail.classList.remove("inactive");
+    desktopMenu.classList.add("inactive");
+}
+
+function productDetailClose(){
+    productDetail.classList.add("inactive");
+}
 
 const productList = []
 productList.push({
@@ -76,6 +95,7 @@ productList.forEach(product => {
     const productImage = document.createElement("img");
     productImage.src = product.image;
     productImage.classList.add("productImg");
+    productImage.addEventListener("click", openProductDetail);
 
     const productInfo = document.createElement("div");
     productInfo.classList.add("productInformation");
