@@ -7,6 +7,8 @@ const mobileMenu = document.querySelector(".mobileMenu")
 const cartMenu = document.querySelector(".navShoppingCart");
 const cartDetail = document.querySelector(".cartDetail");
 
+const cardsContainer = document.querySelector(".cardsContainer");
+
 menuEmail.addEventListener("click", toggleMenu);
 burgerMenu.addEventListener("click", toggleBurger);
 cartMenu.addEventListener("click", toggleCart);
@@ -38,3 +40,64 @@ function toggleCart(){
     }
     cartDetail.classList.toggle("inactive");
 }
+
+
+const productList = []
+productList.push({
+    name: "KTM Duke",
+    price: 100000,
+    image: "https://images.pexels.com/photos/2626665/pexels-photo-2626665.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+});
+productList.push({
+    name: "KTM Duke",
+    price: 100000,
+    image: "https://images.pexels.com/photos/2626665/pexels-photo-2626665.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+});
+productList.push({
+    name: "KTM Duke",
+    price: 100000,
+    image: "https://images.pexels.com/photos/2626665/pexels-photo-2626665.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+});
+productList.push({
+    name: "KTM Duke",
+    price: 100000,
+    image: "https://images.pexels.com/photos/2626665/pexels-photo-2626665.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+});
+productList.push({
+    name: "KTM Duke",
+    price: 100000,
+    image: "https://images.pexels.com/photos/2626665/pexels-photo-2626665.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+});
+
+productList.forEach(product => {
+    const productCard = document.createElement("div");
+    productCard.classList.add("productCard");
+
+    const productImage = document.createElement("img");
+    productImage.src = product.image;
+    productImage.classList.add("productImg");
+
+    const productInfo = document.createElement("div");
+    productInfo.classList.add("productInformation");
+
+    const productInfoContent = document.createElement("div");
+    const productPrice = document.createElement("p");
+    productPrice.textContent = `$ ${product.price}`;
+    const productName = document.createElement("p");
+    productName.textContent = product.name;
+
+    const productFigure = document.createElement("figure");
+    const figureImage = document.createElement("img");
+    figureImage.src = "./assets/Platzi_YardSale_Icons/bt_add_to_cart.svg"
+
+
+    productFigure.appendChild(figureImage);
+    productInfoContent.appendChild(productPrice);
+    productInfoContent.appendChild(productName);
+    productInfo.appendChild(productInfoContent);
+    productInfo.appendChild(productFigure);
+    productCard.appendChild(productImage);
+    productCard.appendChild(productInfo);
+
+    cardsContainer.appendChild(productCard);
+});

@@ -141,6 +141,9 @@ nav div.navbarLeft ul.categories {
 .mobileMenu {
     padding: 0 8px;
     height: 100vh;
+    width: 100%;
+    left: 0;
+    background-color: var(--white);
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -190,14 +193,17 @@ nav div.navbarLeft ul.categories {
 }
 
 /* Shopping cart */
-.cartDetail {
+aside {
     width: 360px;
-    padding: 0 20px;
     position: absolute;
     right: 0;
     box-sizing: border-box;
+    background-color: var(--white);
 }
 
+#shoppingCart{
+    padding: 0 20px;
+}
 .titleContainer{
     display: flex;
 }
@@ -286,6 +292,128 @@ nav div.navbarLeft ul.categories {
 }
 
 
+/* Lista productos */
+.cardsContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 240px);
+    gap: 28px;
+    place-content: center;
+    margin-top: 20px;
+}
+
+.productCard {
+    width: 240px;
+}
+
+/*object-fit:cover la imagen conserva su tamaño independiente del w y h, se ajusta*/
+.productCard .productImg {
+    width: 240px;
+    height: 240px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.productInformation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 4px;
+}
+
+.productInformation div p:nth-child(1){
+    font-weight: bold;
+    font-size: var(--md);
+    margin-top: 0;
+    margin-bottom: 4px;
+}
+
+.productInformation div p:nth-child(2){
+    color: var(--very-light-pink);
+    font-size: var(--sm);
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.productInformation figure {
+    margin: 0;
+}
+
+.productInformation .cart {
+    width: 32px;
+    height: 32px;
+}
+
+/* Detalles productos */
+
+
+.closeBtn{
+    background-color: var(--white);
+    cursor: pointer;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.closeBtn img{
+    width: 10px;
+    height: 10px;
+}
+
+.productDetail >img:nth-child(2){
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 0 0 0 40px;
+}
+
+.productInfo{
+    margin: 24px 24px 0 24px;
+}
+
+.productInfo p:nth-child(1){
+    font-weight: bold;
+    font-size: var(--md);
+    margin-top: 0;
+    margin-bottom: 4px;
+}
+
+.productInfo p:nth-child(2){
+    color: var(--very-light-pink);
+    font-size: var(--md);
+    margin-top: 0;
+    margin-bottom: 24px;
+}
+
+.productInfo p:nth-child(3){
+    color: var(--very-light-pink);
+    font-size: var(--sm);
+}
+
+.primaryButton {
+    background-color: var(--hospital-green);
+    border-radius: 8px;
+    border: none;
+    color: var(--white);
+    width: 100%;
+    cursor: pointer;
+    font-size: var(--md);
+    font-weight: bold;
+    height: 50px;
+}
+
+.cartButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
 @media (max-width:640px) {
     .burgerMenu {
         display: block;
@@ -299,6 +427,21 @@ nav div.navbarLeft ul.categories {
 
     .cartDetail {
         width: 100%;
+    }
+    .productDetail{
+        width: 100%;
+    }
+    .cardsContainer {
+        grid-template-columns: repeat(auto-fill, 140px);
+        gap: 28px;
+    }
+    .productCard{
+        width: 140px;
+    }
+
+    .productCard .productImg{
+        width: 140px;
+        height: 140px;
     }
 }
 
